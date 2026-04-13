@@ -34,9 +34,9 @@ export default function AboutPage() {
       <FadeIn>
       <section className="py-[80px] bg-background max-md:py-[60px] max-sm:py-[50px] relative z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
         <div className="max-w-[1200px] mx-auto px-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start grid-areas-about max-md:grid-cols-1 max-md:gap-[3rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
             
-            <div className="pr-0 md:pr-[2rem] pb-[2rem] w-full [grid-area:content] md:[grid-area:auto]">
+            <div className="w-full">
               <h2 className="text-[2.2rem] font-bold text-accent mb-[2rem] leading-[1.3] [text-shadow:0_4px_12px_rgba(66,135,245,0.3)] max-md:text-[1.8rem] max-sm:text-[1.5rem] max-sm:mb-[1.5rem]">
                 F INOX STEEL - Váš partner pre hliníkové brány a kovové konštrukcie
               </h2>
@@ -70,8 +70,8 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="relative flex justify-center items-start w-[calc(100%+2rem)] ml-[2rem] md:ml-[2rem] md:w-auto md:ml-0 [grid-area:image] md:[grid-area:auto] max-md:w-full max-md:ml-0">
-              <div className="relative overflow-hidden group w-full h-auto">
+            <div className="relative w-full h-auto flex flex-col justify-center items-center mt-8 md:mt-0">
+              <div className="relative overflow-hidden group w-full h-auto w-full max-w-[600px]">
                 <img 
                   src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.22.png" 
                   alt="F INOX STEEL hliníkové pergoly"

@@ -59,7 +59,7 @@ export default function HeroSlider() {
       {/* Hero Content */}
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[95%] w-full px-5 flex items-center justify-start gap-15 z-10 pointer-events-none">
         <div className="flex-1 max-w-[700px] pointer-events-auto">
-          <h1 className="text-[4rem] font-bold leading-[1.1] mb-5 text-shadow-md max-w-[650px] [text-shadow:0_4px_8px_rgba(0,0,0,0.5)]">
+          <h1 className="text-[2.2rem] md:text-[4rem] font-bold leading-[1.1] mb-3 md:mb-5 text-shadow-md max-w-full md:max-w-[650px] [text-shadow:0_4px_8px_rgba(0,0,0,0.5)]">
             HLINÍKOVÉ BRÁNY A KOVOVÉ KONŠTRUKCIE
           </h1>
 
@@ -73,7 +73,7 @@ export default function HeroSlider() {
                 transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
                 className="absolute top-0 left-0 w-full"
               >
-                <p className="text-[1.3rem] m-0 leading-[1.6] text-white/95 font-normal [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]">
+                <p className="text-[0.95rem] md:text-[1.3rem] m-0 leading-[1.6] text-white/95 font-normal [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]">
                   <strong className="text-secondary font-semibold [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">
                     {slides[currentSlide].highlight}
                   </strong>
@@ -108,7 +108,7 @@ export default function HeroSlider() {
             </Link>
             <Link
               href="/produkty-sluzby"
-              className="relative inline-block overflow-hidden px-[35px] py-[18px] rounded-[50px] font-bold uppercase tracking-[1.2px] transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] text-[14px] font-sans no-underline shadow-[0_6px_20px_rgba(0,0,0,0.15)] bg-transparent text-white border-2 border-white/80 backdrop-blur-[10px] group hover:bg-white/95 hover:text-primary hover:border-white hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(255,255,255,0.3)]"
+              className="relative hidden md:inline-block overflow-hidden px-[35px] py-[18px] rounded-[50px] font-bold uppercase tracking-[1.2px] transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] text-[14px] font-sans no-underline shadow-[0_6px_20px_rgba(0,0,0,0.15)] bg-transparent text-white border-2 border-white/80 backdrop-blur-[10px] group hover:bg-white/95 hover:text-primary hover:border-white hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(255,255,255,0.3)]"
             >
               <span className="absolute inset-y-0 -left-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-600 group-hover:left-full" />
               <span className="relative z-10">SLUŽBY</span>
