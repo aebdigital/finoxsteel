@@ -68,7 +68,7 @@ export default function HeroSlider() {
       <div className="absolute inset-0 bg-black/40 z-[-1]" />
 
       {/* Hero Content */}
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[95%] w-full px-5 flex items-center justify-start gap-15 z-10 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[95%] w-full px-5 flex items-center justify-start gap-15 z-1 pointer-events-none">
         <div className="flex-1 max-w-[700px] pointer-events-auto">
           <h1 className="text-[2.2rem] md:text-[4rem] font-bold leading-[1.1] mb-3 md:mb-5 text-shadow-md max-w-full md:max-w-[650px] [text-shadow:0_4px_8px_rgba(0,0,0,0.5)]">
             HLINÍKOVÉ BRÁNY A KOVOVÉ KONŠTRUKCIE
