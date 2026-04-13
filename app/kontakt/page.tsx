@@ -64,7 +64,7 @@ export default function ContactPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/50 z-[2]" />
           </div>
           <div className="relative z-[3] text-center text-white w-[90vw] mx-auto">
-            <div className="max-w-[1200px] mx-auto px-5 w-full">
+            <div className="max-w-[95%] mx-auto px-5 w-full">
               <h1 className="text-[3rem] font-bold m-0 [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)] max-md:text-[2.5rem] max-sm:text-[2rem]">
                 Kontakt
               </h1>
@@ -75,7 +75,7 @@ export default function ContactPage() {
         {/* Contact Main Section */}
         <FadeIn>
         <section className="relative py-[80px] pb-[100px] bg-background z-10 max-md:py-[60px] max-md:pb-[80px] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10 after:absolute after:inset-0 after:bg-[repeating-linear-gradient(45deg,transparent,transparent_35px,rgba(66,135,245,0.02)_35px,rgba(66,135,245,0.02)_70px)] after:opacity-50 after:pointer-events-none">
-          <div className="max-w-[1200px] mx-auto px-5 relative z-10">
+          <div className="max-w-[95%] mx-auto px-5 relative z-10">
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] max-md:gap-[40px]">
               {/* Form Section */}

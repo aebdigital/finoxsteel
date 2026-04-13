@@ -121,7 +121,7 @@ export default function ReferencesPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/50 z-[2]" />
           </div>
           <div className="relative z-[3] text-center text-white w-[90vw] mx-auto">
-             <div className="max-w-[1200px] mx-auto px-5 w-full">
+             <div className="max-w-[95%] mx-auto px-5 w-full">
                 <h1 className="text-[3rem] font-bold m-0 [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)] max-md:text-[2.5rem] max-sm:text-[2rem]">
                    Referencie
                 </h1>
@@ -132,7 +132,7 @@ export default function ReferencesPage() {
         {/* Portfolio Section */}
         <FadeIn>
         <section className="py-[4rem] min-h-[500px] bg-background relative z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
-          <div className="max-w-[1200px] mx-auto w-full px-5">
+          <div className="max-w-[95%] mx-auto w-full px-5">
             {/* Filter Buttons */}
             <div className="flex justify-center flex-wrap gap-[1rem] mb-[3rem] px-[1rem] text-center max-md:gap-[0.5rem] max-md:px-[0.5rem]">
               <button 
@@ -183,7 +183,7 @@ export default function ReferencesPage() {
           </div>
 
           <div className="w-full">
-            <motion.div layout className="grid grid-cols-3 gap-[5px] mb-[4rem] px-[5px] max-w-[1500px] mx-auto min-h-[200px] max-md:grid-cols-2 max-sm:grid-cols-1 max-md:gap-[3px] max-md:px-[3px] max-sm:gap-[5px] max-sm:px-[5px]">
+            <motion.div layout className="grid grid-cols-3 gap-[5px] mb-[4rem] px-[5px] max-w-full mx-auto min-h-[200px] max-md:grid-cols-2 max-sm:grid-cols-1 max-md:gap-[3px] max-md:px-[3px] max-sm:gap-[5px] max-sm:px-[5px]">
               <AnimatePresence>
                 {filteredImages.map((img, i) => (
                   <motion.div

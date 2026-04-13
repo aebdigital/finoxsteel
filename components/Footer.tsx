@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="relative bg-gradient-to-br from-secondary to-[#f7c93d] py-20 px-5 text-center overflow-hidden z-10 shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
           <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)] animate-[spin_20s_linear_infinite] pointer-events-none" />
           
-          <div className="max-w-[1200px] mx-auto relative z-[2]">
+          <div className="max-w-[95%] mx-auto relative z-[2]">
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-5 backdrop-blur-md border border-white/20">
               <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -46,7 +46,7 @@ export default function Footer() {
 
         {/* Main Footer Content */}
         <div className="relative pt-20 pb-15 z-10">
-          <div className="max-w-[1200px] mx-auto px-5">
+          <div className="max-w-[95%] mx-auto px-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-12 items-start">
               
               {/* Company Info */}
@@ -139,7 +139,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="relative py-7 border-t border-white/10 backdrop-blur-md text-center md:text-left z-10">
-          <div className="max-w-[1200px] mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="max-w-[95%] mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/60 text-[0.85rem]">
               <p className="m-0">&copy; 2025 F INOX STEEL - Všetky práva vyhradené</p>
             </div>
