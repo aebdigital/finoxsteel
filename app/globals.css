@@ -54,8 +54,7 @@ section {
 
 /* Direct texture class - apply to sections that need the texture */
 .bg-textured {
-  background-image: url("/texture.png"), var(--section-gradient, none);
-  background-repeat: repeat;
-  background-size: 300px auto;
-  background-blend-mode: overlay;
+  background-image: url("/texture.png") !important;
+  background-repeat: repeat !important;
+  background-size: 400px auto !important;
 }
