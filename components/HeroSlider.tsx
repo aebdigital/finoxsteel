@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 
 const slides = [
   {
@@ -30,6 +30,14 @@ const slides = [
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,9 +47,12 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative h-[90vh] overflow-hidden flex items-end text-white">
+    <section ref={sectionRef} className="relative h-[90vh] overflow-hidden flex items-end text-white">
       {/* Background Images */}
-      <div className="absolute inset-0 z-[-2] bg-black bg-opacity-40">
+      <motion.div 
+        style={{ y }}
+        className="absolute inset-0 z-[-2] bg-black bg-opacity-40"
+      >
         {slides.map((slide, index) => (
           <img
             key={slide.id}
@@ -52,7 +63,7 @@ export default function HeroSlider() {
             }`}
           />
         ))}
-      </div>
+      </motion.div>
 
       <div className="absolute inset-0 bg-black/40 z-[-1]" />
 
