@@ -41,6 +41,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://finoxsteel.com/",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative h-[30vh] flex items-center justify-center overflow-hidden max-md:h-[18vh]">
+      <section className="relative h-[30vh] flex items-center justify-center overflow-hidden max-md:h-[18vh] ignore-texture">
         <div className="absolute inset-0 z-[1]">
           <img 
             src="/sources/brany/Screenshot 2025-10-04 at 01.03.15.jpg" 

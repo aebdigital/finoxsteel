@@ -47,3 +47,25 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+section {
+  position: relative;
+}
+
+/* Texture overlay for all sections except those explicitly ignored */
+section:not(.ignore-texture)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/texture.png");
+  background-repeat: repeat;
+  background-size: 300px; /* Adjust size for detail */
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ignore-texture::before {
+  display: none !important;
+}
+

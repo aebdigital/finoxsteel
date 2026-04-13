@@ -47,7 +47,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-[90vh] overflow-hidden flex items-end text-white">
+    <section ref={sectionRef} className="relative h-[90vh] overflow-hidden flex items-end text-white ignore-texture">
       {/* Background Images */}
       <motion.div 
         style={{ y }}

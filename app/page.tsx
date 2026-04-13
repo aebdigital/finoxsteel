@@ -52,7 +52,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <div className="text-[2.1rem] md:text-[2.5rem] font-bold leading-[0.8] mb-[5px]">8<span className="text-white">+</span></div>
+                    <div className="text-[2.1rem] md:text-[2.5rem] font-bold leading-[0.8] mb-[5px]">8</div>
                     <div className="text-[0.9rem] opacity-90 uppercase tracking-[0.5px]">rokov na trhu</div>
                   </div>
                 </div>
