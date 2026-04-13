@@ -53,7 +53,7 @@ section {
 }
 
 /* Texture overlay for all sections except those explicitly ignored */
-section:not(.ignore-texture)::before {
+section:not(.ignore-texture)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -62,10 +62,11 @@ section:not(.ignore-texture)::before {
   background-size: 300px; /* Adjust size for detail */
   opacity: 0.15;
   pointer-events: none;
-  z-index: 1;
+  z-index: -5;
 }
 
-.ignore-texture::before {
+.ignore-texture::after {
   display: none !important;
 }
+
 
