@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       {/* About Main Section */}
       <FadeIn>
-      <section className="py-[80px] bg-background max-md:py-[60px] max-sm:py-[50px] relative z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
+      <section className="py-[80px] bg-background max-md:py-[60px] max-sm:py-[50px] relative z-10 bg-textured before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
         <div className="max-w-[95%] mx-auto px-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
             

@@ -131,7 +131,7 @@ export default function ReferencesPage() {
 
         {/* Portfolio Section */}
         <FadeIn>
-        <section className="py-[4rem] min-h-[500px] bg-background relative z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
+        <section className="py-[4rem] min-h-[500px] bg-background relative z-10 bg-textured before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
           <div className="max-w-[95%] mx-auto w-full px-5">
             {/* Filter Buttons */}
             <div className="flex justify-center flex-wrap gap-[1rem] mb-[3rem] px-[1rem] text-center max-md:gap-[0.5rem] max-md:px-[0.5rem]">

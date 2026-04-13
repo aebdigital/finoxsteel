@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="pt-[140px] pb-20 bg-background min-h-screen text-foreground">
+    <main className="pt-[140px] pb-20 bg-background min-h-screen text-foreground bg-textured">
       <div className="max-w-[95%] mx-auto px-5">
         <h1 className="text-3xl md:text-5xl font-bold text-accent mb-10 leading-tight">
           Ochrana osobných údajov

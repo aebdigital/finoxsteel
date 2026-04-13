@@ -62,7 +62,7 @@ export default function ServicesPage() {
 
       {/* Services Section */}
       <FadeIn>
-      <section className="py-[6rem] pb-[4rem] bg-background relative z-10 max-md:pt-[50px] max-md:pb-[2rem] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
+      <section className="py-[6rem] pb-[4rem] bg-background relative z-10 max-md:pt-[50px] max-md:pb-[2rem] bg-textured before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
         <div className="w-full px-5">
           <div className="grid grid-cols-2 gap-[5px] mb-[6rem] max-w-full mx-auto max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-[2rem] max-md:mb-[4rem]">
             {services.map((svc) => (

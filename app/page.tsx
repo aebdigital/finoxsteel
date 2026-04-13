@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* About Section */}
       <FadeIn>
-      <section id="about" className="relative py-[100px] bg-background z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
+      <section id="about" className="relative py-[100px] bg-background z-10 bg-textured before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_20%_30%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10">
         <div className="max-w-[95%] mx-auto px-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start">
             <div className="flex flex-col gap-10">
@@ -103,7 +103,7 @@ export default function Home() {
 
       {/* Gallery Section */}
       <FadeIn delay={0.2}>
-      <section id="gallery" className="relative py-[80px] pb-[100px] bg-[#111] overflow-hidden z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_30%_20%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10 after:absolute after:top-0 after:left-0 after:right-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[rgba(66,135,245,0.3)] after:to-transparent">
+      <section id="gallery" className="relative py-[80px] pb-[100px] bg-[#111] overflow-hidden z-10 bg-textured before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_30%_20%,rgba(66,135,245,0.05)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(42,82,152,0.05)_0%,transparent_50%)] before:-z-10 after:absolute after:top-0 after:left-0 after:right-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[rgba(66,135,245,0.3)] after:to-transparent">
         <div className="max-w-[95%] mx-auto px-5">
           <h2 className="text-[5rem] font-bold text-left mb-[50px] text-accent p-0 [text-shadow:0_4px_12px_rgba(66,135,245,0.3)] leading-tight">
             Galéria
