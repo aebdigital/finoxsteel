@@ -55,6 +55,7 @@ section {
 /* Direct texture class - apply to sections that need the texture */
 .bg-textured {
   background-image: url("/texture.png") !important;
-  background-repeat: repeat !important;
-  background-size: 400px auto !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
 }

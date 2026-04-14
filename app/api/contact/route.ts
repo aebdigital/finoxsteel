@@ -47,9 +47,9 @@ export async function POST(request: Request) {
         api_key: apiKey,
         to: [recipient],
         sender: sender,
-        subject: \`Nový dopyt od \${name} (F INOX STEEL)\`,
+        subject: `Nový dopyt od ${name} (F INOX STEEL)`,
         html_body: emailHtml,
-        text_body: \`Meno: \${name}\\nEmail: \${email}\\nTelefón: \${phone}\\nTyp: \${projectType}\\nSpráva:\\n\${message}\`
+        text_body: `Meno: ${name}\nEmail: ${email}\nTelefón: ${phone}\nTyp: ${projectType}\nSpráva:\n${message}`
       }),
     });
 
