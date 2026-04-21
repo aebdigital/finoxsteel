@@ -63,7 +63,7 @@ const branyVariants = [
   {
     name: "PERFO",
     desc: "Perforovaný hliníkový plech v ráme ponúka jedinečnú hru svetla a tieňa. Moderný dizajn s výrazným architektonickým charakterom.",
-    img: "/sources/brany/service-brana.jpg"
+    img: "/sources/brany/perfo.jpg"
   },
   {
     name: "LINEA",
