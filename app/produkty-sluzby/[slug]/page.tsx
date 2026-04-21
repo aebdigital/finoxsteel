@@ -136,19 +136,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   );
                 })}
               </nav>
-
-              <div className="mt-12 p-8 bg-[rgba(255,204,0,0.03)] border border-[rgba(255,204,0,0.1)] rounded-xl relative overflow-hidden">
-                <h4 className="text-xl font-bold mb-3 text-white">Máte otázku?</h4>
-                <p className="text-white/60 text-sm mb-6 leading-relaxed">
-                  Neváhajte nás kontaktovať pre nezáväznú konzultáciu ohľadom úpravy na mieru.
-                </p>
-                <Link 
-                  href="/kontakt"
-                  className="inline-flex items-center justify-center bg-[#FFCC00] text-black font-semibold px-6 py-3 rounded hover:bg-white transition-colors duration-300 w-full"
-                >
-                  Kontaktovať
-                </Link>
-              </div>
             </div>
           </aside>
 
