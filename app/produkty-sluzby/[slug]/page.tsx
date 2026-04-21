@@ -43,22 +43,22 @@ const branyVariants = [
   {
     name: "CLASSIC",
     desc: "Nadčasový „kovaný“ dizajn v modernom hliníkovom prevedení. Tradičný vzhľad bez kompromisov v údržbe a životnosti.",
-    img: "/sources/brany/service-brana.jpg"
+    img: "/sources/brany/77.jpg"
   },
   {
     name: "Z-LINE",
     desc: "Lamely v tvare „Z“ vytvárajú žalúziový efekt s dôrazom na súkromie. Funkčné riešenie, ktoré zároveň pôsobí dynamicky a moderne.",
-    img: "/sources/brany/Screenshot 2025-10-04 at 01.03.15.jpg"
+    img: "/sources/brany/260839579_4686508461372530_2505623606432666679_n.jpg"
   },
   {
     name: "VERTICAL",
     desc: "Bezrámový dizajn s vertikálnymi lamelami pre maximálne čistý a moderný výraz. Minimalizmus, ktorý zvýrazní architektúru domu.",
-    img: "/sources/brany/service-brana.jpg"
+    img: "/sources/brany/479315987_596883256490575_8014104618849694477_n.jpg"
   },
   {
     name: "LINEA AIR",
     desc: "Horizontálne lamely s jemným rozostupom prinášajú rovnováhu medzi súkromím a vzdušnosťou. Moderné riešenie s ľahkým vizuálnym efektom.",
-    img: "/sources/brany/Screenshot 2025-10-04 at 01.03.15.jpg"
+    img: "/sources/brany/IMG_7341.jpg"
   },
   {
     name: "PERFO",
@@ -68,12 +68,12 @@ const branyVariants = [
   {
     name: "LINEA",
     desc: "Na tesno uložené horizontálne lamely vytvárajú čistý a kompaktný vzhľad. Možnosť farebných kombinácií pre dokonalé zladenie s architektúrou.",
-    img: "/sources/brany/Screenshot 2025-10-04 at 01.03.15.jpg"
+    img: "/sources/brany/IMG_7156.jpg"
   },
   {
     name: "LASER CUT",
     desc: "Precízne laserom vypálený vzor do 3 mm hliníkového plechu. Dizajn na mieru – od minimalistických línií až po unikátne, individuálne motívy.",
-    img: "/sources/brany/service-brana.jpg"
+    img: "/sources/brany/290161775_5337746472915389_8790292686262939797_n.jpg"
   }
 ];
 
