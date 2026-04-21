@@ -67,7 +67,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-2 gap-[5px] mb-[6rem] max-w-full mx-auto max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-[2rem] max-md:mb-[4rem]">
             {services.map((svc) => (
               <div key={svc.id} className="relative overflow-hidden h-[40vh] min-h-[350px] rounded-none transition-transform duration-300 hover:-translate-y-[5px] max-md:h-[30vh]">
-                <Link href={`/referencie?filter=${svc.filter}`} className="block w-full h-full text-inherit no-underline group/card">
+                <Link href={`/produkty-sluzby/${svc.id}`} className="block w-full h-full text-inherit no-underline group/card">
                   <div className="relative w-full h-full overflow-hidden">
                     <img 
                       src={svc.img} 

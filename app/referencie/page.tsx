@@ -1,60 +1,63 @@
 "use client";
 
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { supabase } from "@/lib/supabase";
+import { X, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
 type Category = "vsetko" | "brany" | "schody-zabradlia" | "pergoly" | "konstrukcie";
 
-const images = [
-  { src: "/sources/brany/255020066_4643795265643850_3352048480199650790_n.jpg", category: "brany" },
-  { src: "/sources/brany/260839579_4686508461372530_2505623606432666679_n.jpg", category: "brany" },
-  { src: "/sources/brany/290161775_5337746472915389_8790292686262939797_n.jpg", category: "brany" },
-  { src: "/sources/brany/4.jpg", category: "brany" },
-  { src: "/sources/brany/479315987_596883256490575_8014104618849694477_n.jpg", category: "brany" },
-  { src: "/sources/brany/486422956_624113283767572_7579823688339688467_n.jpg", category: "brany" },
-  { src: "/sources/brany/76.jpg", category: "brany" },
-  { src: "/sources/brany/77.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_3840.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_4844.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_4904 copy.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_4906 copy.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_6886.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_6968.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_7156.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_7341.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_7523.jpg", category: "brany" },
-  { src: "/sources/brany/IMG_7715.jpg", category: "brany" },
-  { src: "/sources/brany/Screenshot 2025-10-04 at 01.02.22.jpg", category: "brany" },
-  { src: "/sources/brany/Screenshot 2025-10-04 at 01.03.01.jpg", category: "brany" },
-  { src: "/sources/brany/Screenshot 2025-10-04 at 01.03.15.jpg", category: "brany" },
-  { src: "/sources/brany/service-brana.jpg", category: "brany" },
-
-  { src: "/sources/pergoly/IMG_6212.jpg", category: "pergoly" },
-  { src: "/sources/pergoly/IMG_7318.jpg", category: "pergoly" },
-  { src: "/sources/pergoly/IMG_7321_jpg.jpg", category: "pergoly" },
-  { src: "/sources/pergoly/Screenshot 2025-10-04 at 01.07.22.png", category: "pergoly" },
-  { src: "/sources/pergoly/Screenshot 2025-10-04 at 01.07.28.png", category: "pergoly" },
-  { src: "/sources/pergoly/Screenshot 2025-10-04 at 01.07.39.png", category: "pergoly" },
-  { src: "/sources/pergoly/Screenshot 2025-10-04 at 01.07.51.png", category: "pergoly" },
-  { src: "/sources/pergoly/pergola.jpg", category: "pergoly" },
-
-  { src: "/sources/schodiska_a_zabradlia/1.jpg", category: "schody-zabradlia" },
-  { src: "/sources/schodiska_a_zabradlia/121.jpg", category: "schody-zabradlia" },
-  { src: "/sources/schodiska_a_zabradlia/432314200_376685958510307_4362093780546380355_n.jpg", category: "schody-zabradlia" },
-  { src: "/sources/schodiska_a_zabradlia/IMG_5401-scaled.jpg", category: "schody-zabradlia" },
-  { src: "/sources/schodiska_a_zabradlia/IMG_5420.jpg", category: "schody-zabradlia" },
-  { src: "/sources/schodiska_a_zabradlia/IMG_7495.jpg", category: "schody-zabradlia" },
-
-  { src: "/sources/masivne konstrukcie/konstrukcia.jpg", category: "konstrukcie" }
-];
+interface GalleryImage {
+  src: string;
+  category: Category;
+}
 
 export default function ReferencesPage() {
+  const [images, setImages] = useState<GalleryImage[]>([]);
   const [filter, setFilter] = useState<Category>("brany");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    async function fetchImages() {
+      try {
+        const { data: site } = await supabase
+          .from('sites')
+          .select('id')
+          .eq('slug', 'finoxsteel')
+          .single();
+
+        if (site) {
+          const { data, error } = await supabase
+            .from('gallery_images')
+            .select('image_path, category')
+            .eq('site_id', site.id)
+            .order('display_order', { ascending: true });
+
+          if (error) throw error;
+
+          const formattedImages = data.map(img => ({
+            src: img.image_path.startsWith('http') 
+              ? img.image_path 
+              : img.image_path.startsWith('sources/') 
+                ? `/${img.image_path}` 
+                : supabase.storage.from('site-uploads').getPublicUrl(img.image_path).data.publicUrl,
+            category: img.category as Category
+          }));
+
+          setImages(formattedImages);
+        }
+      } catch (err) {
+        console.error('Error fetching gallery:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchImages();
+
     // Check if there is a filter parameter in the URL
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
@@ -183,28 +186,35 @@ export default function ReferencesPage() {
           </div>
 
           <div className="w-full">
-            <motion.div layout className="grid grid-cols-3 gap-[5px] mb-[4rem] px-[5px] max-w-full mx-auto min-h-[200px] max-md:grid-cols-2 max-sm:grid-cols-1 max-md:gap-[3px] max-md:px-[3px] max-sm:gap-[5px] max-sm:px-[5px]">
-              <AnimatePresence>
-                {filteredImages.map((img, i) => (
-                  <motion.div
-                    layout
-                    key={img.src}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.3 }}
-                    className="relative bg-gradient-to-br from-[rgba(42,82,152,0.15)] to-[rgba(30,60,114,0.1)] rounded-none overflow-hidden border border-[rgba(66,135,245,0.2)] shadow-[0_4px_20px_rgba(0,0,0,0.4)] cursor-pointer min-h-[250px] group max-md:min-h-[180px] max-sm:min-h-[240px]"
-                    onClick={() => openLightbox(img.src)}
-                  >
-                    <img 
-                      src={img.src} 
-                      alt={`F INOX STEEL ${img.category}`} 
-                      className="w-full h-full object-cover rounded-none transition-transform duration-300 scale-[1.01] group-hover:scale-[1.11] min-h-[250px] max-md:min-h-[180px] max-sm:min-h-[240px]"
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </motion.div>
+            {loading ? (
+              <div className="flex flex-col items-center justify-center min-h-[400px] gap-4">
+                <Loader2 className="w-12 h-12 text-primary animate-spin" />
+                <p className="text-accent opacity-60 font-medium">Načítavam referencie...</p>
+              </div>
+            ) : (
+              <motion.div layout className="grid grid-cols-3 gap-[5px] mb-[4rem] px-[5px] max-w-full mx-auto min-h-[200px] max-md:grid-cols-2 max-sm:grid-cols-1 max-md:gap-[3px] max-md:px-[3px] max-sm:gap-[5px] max-sm:px-[5px]">
+                <AnimatePresence>
+                  {filteredImages.map((img, i) => (
+                    <motion.div
+                      layout
+                      key={img.src}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                      className="relative bg-gradient-to-br from-[rgba(42,82,152,0.15)] to-[rgba(30,60,114,0.1)] rounded-none overflow-hidden border border-[rgba(66,135,245,0.2)] shadow-[0_4px_20px_rgba(0,0,0,0.4)] cursor-pointer min-h-[250px] group max-md:min-h-[180px] max-sm:min-h-[240px]"
+                      onClick={() => openLightbox(img.src)}
+                    >
+                      <img 
+                        src={img.src} 
+                        alt={`F INOX STEEL ${img.category}`} 
+                        className="w-full h-full object-cover rounded-none transition-transform duration-300 scale-[1.01] group-hover:scale-[1.11] min-h-[250px] max-md:min-h-[180px] max-sm:min-h-[240px]"
+                      />
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            )}
           </div>
         </section>
         </FadeIn>
