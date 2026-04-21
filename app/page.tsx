@@ -35,6 +35,7 @@ export default function Home() {
                 className="object-cover rounded-none"
                 priority
               />
+              </div>
               <div className="static md:absolute md:-top-[30px] md:-right-[30px] flex flex-col gap-[20px] mt-8 md:mt-0 w-full md:w-auto">
                 <div className="flex items-center gap-[20px] p-[25px] rounded-none min-w-[250px] bg-gradient-to-br from-[rgba(30,60,114,0.95)] to-[rgba(42,82,152,0.95)] text-white border border-[rgba(66,135,245,0.3)] shadow-[0_8px_24px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]">
                   <div className="flex-shrink-0">
