@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import { ArrowRight } from "lucide-react";
 
@@ -81,10 +82,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       {/* Dynamic Exact Hero Map */}
       <section className="relative h-[35vh] flex items-center justify-center overflow-hidden bg-transparent max-md:h-[25vh]">
         <div className="absolute inset-0 z-[1] bg-transparent">
-          <img 
+          <Image 
             src={serviceDef.heroBg} 
             alt={serviceDef.title}
-            className="w-full h-full object-cover object-center opacity-100 block z-[1]"
+            fill
+            priority
+            className="object-cover object-center opacity-100 block z-[1]"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#0f1014]/90 via-[#0f1014]/60 to-transparent z-[2]" />
         </div>
@@ -159,10 +162,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   <FadeIn key={variant.name}>
                     <div className="flex flex-col md:flex-row gap-8 bg-white/5 border border-white/10 rounded-2xl overflow-hidden group hover:bg-white/10 transition-colors">
                       <div className="md:w-2/5 overflow-hidden relative min-h-[250px]">
-                        <img 
+                        <Image 
                           src={variant.img} 
                           alt={variant.name}
-                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                       </div>
                       <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
@@ -180,10 +184,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             {slug !== "brany" && (
               <FadeIn>
                 <div className="aspect-video w-full rounded-2xl overflow-hidden relative border border-white/10 mb-16">
-                  <img 
+                  <Image 
                     src={serviceDef.heroBg} 
                     alt={serviceDef.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-80"
+                    fill
+                    className="object-cover opacity-80"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f1014] via-transparent to-transparent" />
                 </div>

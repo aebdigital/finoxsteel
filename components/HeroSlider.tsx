@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 
 const slides = [
@@ -54,11 +55,13 @@ export default function HeroSlider() {
         className="absolute inset-0 z-[-2] bg-black bg-opacity-40"
       >
         {slides.map((slide, index) => (
-          <img
+          <Image
             key={slide.id}
             src={slide.image}
             alt={slide.alt}
-            className={`absolute inset-0 w-full h-full object-cover object-[center_20%] transition-opacity duration-1000 ease-in-out ${
+            fill
+            priority={index === 0}
+            className={`object-cover object-[center_20%] transition-opacity duration-1000 ease-in-out ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           />

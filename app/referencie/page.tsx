@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { X, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
@@ -205,11 +206,15 @@ export default function ReferencesPage() {
                       className="relative bg-gradient-to-br from-[rgba(42,82,152,0.15)] to-[rgba(30,60,114,0.1)] rounded-none overflow-hidden border border-[rgba(66,135,245,0.2)] shadow-[0_4px_20px_rgba(0,0,0,0.4)] cursor-pointer min-h-[250px] group max-md:min-h-[180px] max-sm:min-h-[240px]"
                       onClick={() => openLightbox(img.src)}
                     >
-                      <img 
-                        src={img.src} 
-                        alt={`F INOX STEEL ${img.category}`} 
-                        className="w-full h-full object-cover rounded-none transition-transform duration-300 scale-[1.01] group-hover:scale-[1.11] min-h-[250px] max-md:min-h-[180px] max-sm:min-h-[240px]"
-                      />
+                      <div className="relative h-full w-full">
+                        <Image 
+                          src={img.src} 
+                          alt={`F INOX STEEL ${img.category}`} 
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                        />
+                      </div>
                     </motion.div>
                   ))}
                 </AnimatePresence>

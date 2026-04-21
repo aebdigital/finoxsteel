@@ -27,10 +27,13 @@ export default function Home() {
             </div>
             
             <div className="relative mt-8 md:mt-0">
-              <img 
+              <div className="relative mt-8 md:mt-0 h-[250px] md:h-[500px]">
+              <Image 
                 src="/sources/brany/Screenshot 2025-10-04 at 01.02.22.jpg" 
                 alt="F INOX STEEL kovové práce" 
-                className="w-full h-[250px] md:h-[500px] object-cover rounded-none"
+                fill
+                className="object-cover rounded-none"
+                priority
               />
               <div className="static md:absolute md:-top-[30px] md:-right-[30px] flex flex-col gap-[20px] mt-8 md:mt-0 w-full md:w-auto">
                 <div className="flex items-center gap-[20px] p-[25px] rounded-none min-w-[250px] bg-gradient-to-br from-[rgba(30,60,114,0.95)] to-[rgba(42,82,152,0.95)] text-white border border-[rgba(66,135,245,0.3)] shadow-[0_8px_24px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]">
@@ -112,79 +115,79 @@ export default function Home() {
             {/* Gallery Item 1 */}
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/brany/76.jpg" alt="F INOX STEEL - hliníkové brány" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/brany/76.jpg" alt="F INOX STEEL - hliníkové brány" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/schodiska_a_zabradlia/432314200_376685958510307_4362093780546380355_n.jpg" alt="F INOX STEEL - zábradlia" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/schodiska_a_zabradlia/432314200_376685958510307_4362093780546380355_n.jpg" alt="F INOX STEEL - zábradlia" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.28.png" alt="F INOX STEEL - pergoly" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.28.png" alt="F INOX STEEL - pergoly" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/schodiska_a_zabradlia/1.jpg" alt="F INOX STEEL - kovové práce" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/schodiska_a_zabradlia/1.jpg" alt="F INOX STEEL - kovové práce" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/brany/Screenshot 2025-10-04 at 01.02.22.jpg" alt="F INOX STEEL - hliníkové brány" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/brany/Screenshot 2025-10-04 at 01.02.22.jpg" alt="F INOX STEEL - hliníkové brány" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.39.png" alt="F INOX STEEL - pergoly" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.39.png" alt="F INOX STEEL - pergoly" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/schodiska_a_zabradlia/schody.jpg" alt="F INOX STEEL - zábradlia" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/schodiska_a_zabradlia/schody.jpg" alt="F INOX STEEL - zábradlia" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.22.png" alt="F INOX STEEL - pergoly" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.22.png" alt="F INOX STEEL - pergoly" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/brany/IMG_7523.jpg" alt="F INOX STEEL - hliníkové brány" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/brany/IMG_7523.jpg" alt="F INOX STEEL - hliníkové brány" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.51.png" alt="F INOX STEEL - pergoly" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/pergoly/Screenshot 2025-10-04 at 01.07.51.png" alt="F INOX STEEL - pergoly" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden group">
               <Link href="/referencie" className="block text-inherit no-underline">
-                 <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
-                    <img src="/sources/schodiska_a_zabradlia/IMG_5401-scaled.jpg" alt="F INOX STEEL - kovové práce" className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-110" loading="lazy" />
-                 </div>
+                  <div className="relative overflow-hidden h-[250px] cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]">
+                    <Image src="/sources/schodiska_a_zabradlia/IMG_5401-scaled.jpg" alt="F INOX STEEL - kovové práce" fill className="object-cover transition-transform duration-600 group-hover:scale-110" />
+                  </div>
               </Link>
             </div>
             <div className="relative overflow-hidden flex items-center justify-center h-[250px] bg-primary bg-cover bg-center transition-all duration-300 group">
