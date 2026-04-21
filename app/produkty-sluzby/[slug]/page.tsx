@@ -64,6 +64,16 @@ const branyVariants = [
     name: "PERFO",
     desc: "Perforovaný hliníkový plech v ráme ponúka jedinečnú hru svetla a tieňa. Moderný dizajn s výrazným architektonickým charakterom.",
     img: "/sources/brany/service-brana.jpg"
+  },
+  {
+    name: "LINEA",
+    desc: "Na tesno uložené horizontálne lamely vytvárajú čistý a kompaktný vzhľad. Možnosť farebných kombinácií pre dokonalé zladenie s architektúrou.",
+    img: "/sources/brany/Screenshot 2025-10-04 at 01.03.15.jpg"
+  },
+  {
+    name: "LASER CUT",
+    desc: "Precízne laserom vypálený vzor do 3 mm hliníkového plechu. Dizajn na mieru – od minimalistických línií až po unikátne, individuálne motívy.",
+    img: "/sources/brany/service-brana.jpg"
   }
 ];
 
