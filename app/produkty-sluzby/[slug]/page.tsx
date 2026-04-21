@@ -88,7 +88,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <main className="bg-[#0f1014] min-h-screen text-white">
+    <main className="bg-textured min-h-screen text-white">
       {/* Dynamic Exact Hero Map */}
       <section className="relative h-[35vh] flex items-center justify-center overflow-hidden bg-transparent max-md:h-[25vh]">
         <div className="absolute inset-0 z-[1] bg-transparent">
